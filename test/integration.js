@@ -440,16 +440,6 @@ describe('Parquet', function () {
       return writeTestFile(opts).then(readTestFile);
     });
 
-    it('write a test file with BROTLI compression', function () {
-      const opts = { useDataPageV2: true, compression: 'BROTLI' };
-      return writeTestFile(opts);
-    });
-
-    it('write a test file with BROTLI compression and then read it back', function () {
-      const opts = { useDataPageV2: true, compression: 'BROTLI' };
-      return writeTestFile(opts).then(readTestFile);
-    });
-
   });
 
   describe('using the Stream/Transform API', function () {
