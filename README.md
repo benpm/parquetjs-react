@@ -1,11 +1,6 @@
-# parquet.js
+# parquetjs-react
 
-fully asynchronous, pure node.js implementation of the Parquet file format
-
-<!-- [![Build Status](https://travis-ci.org/ZJONSSON/parquetjs.png?branch=master)](http://travis-ci.org/ZJONSSON/parquetjs) -->
-[![Actions Status](https://github.com/entitycs/parquetjs/workflows/NodeJsCI/badge.svg)](https://github.com/entitycs/parquetjs/actions)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![npm version](https://badge.fury.io/js/parquetjs-lite.svg)](https://badge.fury.io/js/parquetjs-lite)
+fully asynchronous, pure node.js implementation of the Parquet file format. This is a fork of a fork of a fork, an attempt to make parquetjs compatible with React. I've removed the use `fs` and `os`, so you can only load from URLs.
 
 This package contains a fully asynchronous, pure JavaScript implementation of
 the [Parquet](https://parquet.apache.org/) file format. The implementation conforms with the
@@ -23,7 +18,7 @@ Installation
 To use parquet.js with node.js, install it using npm:
 
 ```
-  $ npm install parquetjs-lite
+  $ npm install parquetjs-react
 ```
 
 _parquet.js requires node.js >= 7.6.0_
@@ -36,7 +31,7 @@ Once you have installed the parquet.js library, you can import it as a single
 module:
 
 ``` js
-var parquet = require('parquetjs-lite');
+import parquet from "parquetjs-react";
 ```
 
 Parquet files have a strict schema, similar to tables in a SQL database. So,
@@ -163,7 +158,7 @@ let reader = await parquet.ParquetReader.openS3(
 If the complete parquet file is in buffer it can be read directly from memory without incurring any additional I/O.
 
 ``` js
-const file = fs.readFileSync('fruits.parquet');
+// const file = fs.readFileSync('fruits.parquet');
 let reader = await parquet.ParquetReader.openBuffer(file);
 ```
 
