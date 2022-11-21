@@ -3,7 +3,7 @@
   "description": "(React compatible) fully asynchronous, pure JavaScript implementation of the Parquet file format",
   "main": "parquet.js",
   "version": "0.8.0",
-  "homepage": "https://github.com/ironSource/parquetjs",
+  "homepage": "https://github.com/benpm/parquetjs-react",
   "author": "ironSource <npm@ironsrc.com>",
   "license": "MIT",
   "keywords": [
@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/ironSource/parquetjs.git"
+    "url": "git://github.com/benpm/parquetjs-react.git"
   },
   "dependencies": {
     "brotli": "^1.3.0",
